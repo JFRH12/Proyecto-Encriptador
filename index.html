@@ -2,27 +2,56 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./imagenes/favicon.ico">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./style.css">
-    <title>Encriptador de texto por Juan F Rivera</title>
+    <title>Encriptador de Texto</title>
 </head>
 <body>
-    
-    <!--Encabezado-->  
+
+    <!-- Encabezado -->
     <header>
-        <a href="#" rel="">
-            <img src="./imagenes/logo.svg" alt="Logo de Alura" class="logo">
-        </a>
+        <a href="https://app.aluracursos.com/" target="_blank">
+            <img src="./assets/logo.svg" alt="Logo Alura" class="logo">
+        </a>    
     </header>
+
+    <!-- Principal -->
     <main>
         <section class="encriptador">
-            <textarea class="encriptar" placeholder="Ingrese el texto aqui"></textarea>
-            <div class="encriptador-aviso">
-                <img src="./imagenes/aviso.svg"
+            <textarea class="encriptar" placeholder="Ingrese el texto aquí" ></textarea>
+            <div class="encriptador__alert">
+                <img src="./assets/alert.svg" alt="Alert" class="img__alert">
+                <p class="texto__alert">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="encriptador__contenedor">
+                <button type="submit" class="btn__encriptar">Encriptar</button>
+                <button type="submit" class="btn__desencriptar">Desencriptar</button>
             </div>
         </section>
-
+        <section class="tarjeta">
+           <div class="tarjeta__contenedor">
+                <img src="./assets/boy.svg" alt="Image boy" class="img__boy">
+                <p class="texto__uno">Ningún mensaje fue encontrado</p>
+                <p class="texto__dos">Ingrese el texto que deseas encriptar o desencriptar</p>
+           </div>
+           <textarea type="mensaje" class="evaluar" readonly></textarea>
+           <button type="submit" class="btn__copiar">Copiar</button>
+         </section>  
     </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p class="copyright">&copy; copyright 2024 - Encriptador de Texto - desarrollado por Juan F Rivera</p>
+        <a href="https://www.linkedin.com/in/juanfriverah/" target="_blank" >
+            <img src="./assets/linkedin.svg" alt="Logo Linkedin" class="linked">
+        </a>
+        <a href="https://github.com/JFRH12" target="_blank" >
+            <img src="./assets/github.svg" alt="Logo Github" class="git">
+        </a>
+    </footer>
+
+    <script src="./app.js"></script>
+
 </body>
 </html>
