@@ -2,9 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preload" href="./assets/logo.svg" as="image">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="description" content="Página para encriptar y desencriptar texto de forma sencilla y rápida.">
+    <meta name="keywords" content="encriptar, desencriptar, texto, seguridad">
+    <meta name="author" content="Juan F Rivera">
     <title>Encriptador de Texto</title>
 </head>
 <body>
@@ -12,46 +17,50 @@
     <!-- Encabezado -->
     <header>
         <a href="https://app.aluracursos.com/" target="_blank">
-            <img src="./assets/logo.svg" alt="Logo Alura" class="logo">
+            <img src="./assets/logo.svg" alt="Logo de Alura Cursos" class="logo">
         </a>    
     </header>
 
     <!-- Principal -->
     <main>
+        <!-- Sección de encriptación de texto -->
         <section class="encriptador">
-            <textarea class="encriptar" placeholder="Ingrese el texto aquí" ></textarea>
+            <label for="encriptar">Ingrese el texto aquí</label>
+            <textarea id="encriptar" class="encriptar" placeholder="Escribe aquí para encriptar..." aria-label="Campo de texto para encriptar o desencriptar"></textarea>
             <div class="encriptador__alert">
-                <img src="./assets/alert.svg" alt="Alert" class="img__alert">
-                <p class="texto__alert">Solo letras minúsculas y sin acentos</p>
+                <img src="./assets/alert.svg" alt="Icono de advertencia" class="img__alert">
+                <p class="texto__alert">Solo se permiten letras minúsculas sin acentos.</p>
             </div>
             <div class="encriptador__contenedor">
-                <button type="submit" class="btn__encriptar">Encriptar</button>
-                <button type="submit" class="btn__desencriptar">Desencriptar</button>
+                <button type="button" class="btn__encriptar">Encriptar</button>
+                <button type="button" class="btn__desencriptar">Desencriptar</button>
             </div>
         </section>
+
+        <!-- Sección de resultados -->
         <section class="tarjeta">
-           <div class="tarjeta__contenedor">
-                <img src="./assets/boy.svg" alt="Image boy" class="img__boy">
+            <div class="tarjeta__contenedor">
+                <img src="./assets/boy.svg" alt="Ilustración de un niño" class="img__boy">
                 <p class="texto__uno">Ningún mensaje fue encontrado</p>
                 <p class="texto__dos">Ingrese el texto que deseas encriptar o desencriptar</p>
-           </div>
-           <textarea type="mensaje" class="evaluar" readonly></textarea>
-           <button type="submit" class="btn__copiar">Copiar</button>
-         </section>  
+            </div>
+            <textarea class="evaluar" readonly aria-label="Resultado de la encriptación o desencriptación"></textarea>
+            <button type="button" class="btn__copiar">Copiar</button>
+        </section>  
     </main>
 
     <!-- Pie de Página -->
     <footer>
-        <p class="copyright">&copy; copyright 2024 - Encriptador de Texto - desarrollado por Juan F Rivera</p>
-        <a href="https://www.linkedin.com/in/juanfriverah/" target="_blank" >
-            <img src="./assets/linkedin.svg" alt="Logo Linkedin" class="linked">
+        <p class="copyright">&copy; 2024 Encriptador de Texto - Desarrollado por Juan F Rivera</p>
+        <a href="https://www.linkedin.com/in/juanfriverah/" target="_blank">
+            <img src="./assets/linkedin.svg" alt="Logo de LinkedIn" class="linked">
         </a>
-        <a href="https://github.com/JFRH12" target="_blank" >
-            <img src="./assets/github.svg" alt="Logo Github" class="git">
+        <a href="https://github.com/JFRH12" target="_blank">
+            <img src="./assets/github.svg" alt="Logo de GitHub" class="git">
         </a>
     </footer>
 
+    <!-- Script de la aplicación -->
     <script src="./app.js"></script>
-
 </body>
 </html>
